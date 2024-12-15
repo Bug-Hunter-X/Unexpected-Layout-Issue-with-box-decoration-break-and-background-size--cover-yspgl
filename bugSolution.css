@@ -1,0 +1,11 @@
+The solution replaces the problematic `box-decoration-break` property and relies solely on `background-size: cover` to manage the background image:
+
+```css
+div {
+  background-image: url('image.png');
+  background-size: cover;
+  height: 200px;
+}
+```
+
+This revised CSS code eliminates the unexpected layout behavior observed in the original code.  It ensures consistent rendering across different browsers by avoiding the combination of `box-decoration-break: clone;` and `background-size: cover;` that caused the rendering issues.  If you need multiline backgrounds, alternative techniques such as using multiple background images or other layout approaches should be considered.
