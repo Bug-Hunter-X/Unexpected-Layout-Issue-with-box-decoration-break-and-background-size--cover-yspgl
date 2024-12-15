@@ -1,0 +1,12 @@
+The following CSS code causes an unexpected layout issue in some browsers due to the use of an uncommon property and incorrect value combination:
+
+```css
+div {
+  box-decoration-break: clone;
+  background-image: url('image.png');
+  background-size: cover;
+  height: 200px;
+}
+```
+
+The `box-decoration-break: clone;` property attempts to break the background image across multiple lines, but when coupled with `background-size: cover;` and a relatively small height, the image may not render correctly, resulting in unexpected clipping or distortion across different browsers.
